@@ -3,7 +3,7 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import { getSession } from "next-auth/react";
 import { CONSTANTS } from "../../config/constants";
 import { fauna } from "../../services/fauna";
-import { query as reqFauna, Ref } from "faunadb";
+import { query as reqFauna } from "faunadb";
 import { stripe } from "../../services/stripe";
 
 type User = {
@@ -16,11 +16,8 @@ type User = {
 };
 
 type Session = {
-  expires?: string
   user: {
-    name?: string
     email: string
-    image?: string
   }
 }
 
