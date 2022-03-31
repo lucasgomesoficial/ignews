@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/link-passhref */
 import { PostProps } from "./index.types";
 import styles from "./styles.module.scss";
 
